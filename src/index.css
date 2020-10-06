@@ -1,13 +1,399 @@
-body {
+html, body, #app {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+	list-style-type: none;
+    text-decoration: none;
+}
+
+h1{
+	margin-bottom: 2px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.dark {
+  color: #DADADA;
+  background: #1c2022;
+  min-height: 100%;
+}
+.dark a {
+	color: rgb(203, 203, 203);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-clear {
+  border: none;
+  background: transparent;
+}
+
+.nav-link {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav li {
+  margin-right: 10px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.header-lg {
+  font-size: 35px;
+  font-weight: 300;
+  margin: 20px;
+}
+
+.header-sm {
+  font-size: 28px;
+  font-weight: 300;
+  margin: 10px;
+}
+
+
+.center-text {
+  text-align: center;
+}
+
+.link {
+  color: rgb(187, 46, 31);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card-list {
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.card-list li {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.card-list svg {
+  margin-right: 10px;
+}
+
+.card-list a {
+  font-weight: 500;
+  color: inherit;
+}
+
+.bg-light {
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+}
+
+.card {
+  margin: 10px 0;
+  width: auto;
+  padding: 20px;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card img {
+  margin-bottom: 8px;
+}
+
+.instructions-container {
+  margin: 100px 0;
+}
+
+.container-sm {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.battle-instructions {
+  padding: 0;
+  font-size: 25px;
+}
+
+.battle-instructions li {
+  flex: 1;
+  min-width: 300px
+}
+
+.battle-instructions svg {
+  padding: 40px;
+  border-radius: 3px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.player {
+  flex: 1;
+  margin: 0 20px;
+  padding: 10px;
+}
+
+.player-label {
+  font-size: 20px;
+  margin: 5px 0;
+  font-weight: 300;
+}
+
+.player-inputs input {
+  padding: 8px;
+  font-size: 16px;
+  flex: 2;
+  border-radius: 3px;
+  border: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.player-inputs .input-light {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.player-inputs button {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.btn {
+	width: 300px;
+	padding: 10px;
+	border: 2px solid #000;
+	color: #fff;
+	text-align: center;
+	background: #eb30c1;
+	font-weight: 900;
+	font-size: 15px;
+	margin: 15px auto;
+	cursor: pointer;
+}
+
+.dark-btn {
+  color: #e6e6e6;
+  background: #141414;
+}
+
+.btn:disabled {
+  width: 300px;
+	padding: 10px;
+	border: 2px solid #000;
+	color: #fff;
+	text-align: center;
+	background: lightgray;
+	font-weight: 900;
+	font-size: 15px;
+	margin: 15px auto;
+	cursor: pointer;
+}
+
+.players-container {
+  margin: 100px 0;
+}
+
+.avatar-small {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+.player-info {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.player-info .link {
+  margin-left: 10px;
+}
+
+.btn-space {
+  margin: 40px auto;
+}
+
+.error {
+  color: #ff1616;
+  font-size: 20px;
+  margin: 50px 0;
+}
+
+.bg-dark {
+  background: rgb(36, 40, 42);
+  border-radius: 3px;
+}
+
+.player-inputs .input-dark {
+  color: #DADADA;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.light-btn {
+  color: #000;
+  background: #aaa8a8;
+}
+
+.light-btn:disabled {
+  background: #292929;
+  color: #4a4a4a;
+}
+.meta-info-light{
+	margin: 0px 0;
+	color:#969696;
+	font-size: 15px;
+}
+.meta-info-light span{
+  color:gray;
+}
+
+.meta-info-light a{
+	color:black
+}
+
+.meta-info-dark{
+	color:#aaa8a8;
+}
+
+.post{
+	margin: 20px 0;
+  width: auto;
+}
+
+.comment {
+	background: rgba(128, 128, 128, 0.1411764705882353);
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 5px;
+}
+.tweet{
+	width: 100%;
+	max-width: 590px;
+	padding: 10px;
+	display: flex;
+	margin: 25px auto;
+	border: 1px solid #dad7d7;
+	border-radius: 3px;
+	cursor: pointer;
+	text-decoration: none;
+}
+.tweet a{
+	text-decoration: none;
+}
+
+.tweet .avatar{
+	height: 50px;
+  border-radius: 25px;
+  margin: 10px;
+}
+
+.tweet .tweet-info{
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	color: black;
+}
+
+.tweet-icons{
+	display: flex;
+	align-items: center;
+}
+.tweet-icons span{
+	color: #969696;
+    margin: 0 15px 0 5px;
+		font-size: 18px!important;
+		text-decoration: none;
+}
+
+.replying-to{
+	margin: 0;
+  padding: 0;
+  color: #969696;
+	cursor: pointer;
+	border:none;
+	background: transparent;
+	font:11px;
+}
+
+.tweet-info p{
+	font-size: 18px;
+	margin: 20px 0;
+	font-weight: 600;
+	text-decoration: none;
+	color: black;
+}
+
+.tweet-icon{
+	font-size: 27px;
+    color: #697784;
+}
+.tweet-icon:hover{
+	color: 'rgb(224,36,94)'
+}
+
+.heart-button{
+	padding: 0 3px;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+}
+svg:hover {
+  fill: rgb(224,36,94);
+}
+
+.new-tweet{
+	width: 100%;
+	max-width: 590px;
+	margin: 50px auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.textarea {
+	border-radius: 4px;
+	border: 1px solid #dad7d7;
+	padding: 10px;
+	font-size: 15px;
+	height: 100px;
 }
